@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.875rem;
+    opacity: 1;
+    overflow-y: scroll;
+    margin: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.275rem;
+    color: var(--bs-emphasis-color);
+}
+h2{
+    color: #070606;
+}
+
+/* Layout for admin dashboard skeleton */
+
+.wrapper {
+    align-items: stretch;
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    max-width: 264px;
+    min-width: 264px;
+    background: var(--bs-dark);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Sidebar Elements Style */
+
+.sidebar-logo {
+    padding: 1.15rem;
+   
+}
+.sidebar-logo img {
+    border-radius: 70%;
+    height: 70px;
+    width:5cqw;
+}
+
+
+.sidebar-logo a {
+    color: #e9ecef;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.sidebar-header {
+    color: #e9ecef;
+    font-size: .75rem;
+    padding: 1.5rem 1.5rem .375rem;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #e9ecef;
+    position: relative;
+    display: block;
+    font-size: 0.875rem;
+}
+
+.sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+.sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+
+.avatar {
+    height: 40px;
+    width: 40px;
+}
+
+.navbar-expand .navbar-nav {
+    margin-left: auto;
+}
+
+.content {
+    flex: 1;
+    max-width: 100vw;
+    width: 100vw;
+}
+
+@media (min-width:768px) {
+    .content {
+        max-width: auto;
+        width: auto;
+    }
+}
+label {
+    display: block;
+    font:
+      1rem 'Fira Sans',
+      sans-serif;
+  }
+  
+  input,
+  label {
+    margin: 0.4rem 0;
+  }
+  
+.card {
+    box-shadow: 0 0 .875rem 0 rgba(12, 12, 13, 0.05);
+    margin-bottom: 24px;
+    transition: box-shadow 0.3s ease; /* Transition for smooth effect */
+}
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(17, 15, 15, 0.55); /* Shadow properties */
+}
+.card-img img
+{
+    height: 35px;
+    width:35px;
+}
+.Doctor
+{
+    text-align: center;
+     margin-top: 50px;
+}
+.illustration {
+    background-color:rgba(245, 181, 197, 0.53);
+    color: var(--bs-emphasis-color);
+}
+
+.illustration-img {
+    max-width: 150px;
+    width: 100%;
+}
+
+.Sales-table{
+    border: 1px solid rgb(50, 42, 42);
+    border-collapse: collapse;
+    padding: 4px;
+}
+.Sales-table-head{
+    background-color: #e488b59e;
+}
+
+/* Sidebar Toggle */
+
+#sidebar.collapsed {
+    margin-left: -264px;
+}
+
+
+.menu a
+{
+    background-color: rgba(196, 196, 242, 0.559);
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px 0px 20px 0px;
+}
+
+nav
+{
+    display:flex;
+    padding-left: 550px;
+    justify-content: space-around;
+    height: 100%;
+    text-align: center;
+    background-color: #f1e7e7e1;
+}
+
+
+/* Cards */
+.testimonial-card .card-up {
+    height: 80px;
+    overflow: hidden;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    }
+    
+    .testimonial-card .avatar {
+    width: 110px;
+    margin-top: -60px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    }
+
+    @import url(custom.css);
+
+/*Import CSS Plugins*/
+
+@import url(plugins/style-switcher.css);
+
+* {
+	border-radius: 0;
+}
+
+body {
+ color: #333;
+ font-size: 13px;
+ line-height: 1.6;
+ background-color: rgb(249, 249, 248);
+}
+
+body.header-fixed-space {
+  padding-top: 94px;
+}
+body.header-fixed-space-v2 {
+	padding-top: 135px;
+}
+
+p,
+li,
+li a,
+label {
+ color: #555;
+}
+
+a {
+ color: #72c02c;
+ text-decoration: none;
+}
+
+a,
+a:focus,
+a:hover,
+a:active,
+button,
+button:hover {
+	outline: 0 !important;
+}
+
+a:focus {
+text-decoration: none;
+}
+a:hover {
+ color: #72c02c;
+ text-decoration: underline;
+}
+
+/*Boxed Layout
+------------------------------------*/
+.wrapper {
+	background: #fff;
+}
+
+.boxed-layout {
+  padding: 0;
+  box-shadow: 0 0 5px #ccc;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  background: url(../img/patterns/15.png) repeat;
+}
+
+/*Hiding arrows for select field in IE*/
+select::-ms-expand {
+  display: none;
+}
+
+
+.login-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+    background-color: rgba(17, 250, 250, 0.208);
+    box-shadow: 0 0 10px rgba(53, 44, 44, 0.435);
+    
+    margin-bottom: 40px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    /* Adjustments for small devices */
+    .navbar-expand .navbar-nav {
+        margin-left: auto;
+    }
+    .content {
+        max-width: auto;
+        width: auto;
+        padding: 0 15px; /* Add padding to content */
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    /* Adjustments for medium devices */
+    .content {
+        padding: 0 30px; /* Increase padding for medium devices */
+    }
+    nav {
+        padding-left: 0; /* Reset padding for navigation */
+        justify-content: flex-start; /* Align navigation items to the start */
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    /* Adjustments for large devices */
+    .wrapper {
+        flex-direction: row; /* Change flex direction for wrapper */
+    }
+    #sidebar {
+        flex: 0 0 264px; /* Set sidebar width */
+    }
+    .main {
+        flex: 1; /* Take remaining space for main content */
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* Adjustments for extra large devices */
+}

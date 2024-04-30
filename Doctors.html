@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <title>Bootstrap Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/ae360af17e.js" ></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        <aside id="sidebar" class="js-sidebar">
+            <!-- Content For Sidebar -->
+            <div class="h-100">
+                <div class="sidebar-logo">
+                    <img src="data:image/jpeg;base64,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">
+                    <a href="#">
+                     City Hospital
+                    </a>
+                </div>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-header">
+                        Elements
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="index.html" class="sidebar-link">
+                            <i class="fa-solid fa-list pe-2"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-file-lines pe-2"></i>
+                            Patients
+                        </a>
+                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link"> Total Patients</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Total Patient admitted</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <a href="Doctors.html" class="sidebar-link collapsed" data-bs-target="#posts" 
+                            aria-expanded="false"><i class="fa fa-address-book"></i>
+                            Available Staff
+                        </a>
+                        
+                        <a href="Doctors.html" class="sidebar-link collapsed" data-bs-target="#posts" 
+                            aria-expanded="false"><i class="fa fa-folder-open"></i>
+                              Reports
+                        </a>
+                        
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-regular fa-user pe-2"></i>
+                            User
+                        </a>
+                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="Login.html" class="sidebar-link">Login</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Register</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Forgot Password</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-header">
+                        Our Departments
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#multi" 
+                            aria-expanded="false"><i class="fas fa-first-aid   "></i>
+                             Departments
+                        </a>
+                       
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="main">
+            <nav class="navbar navbar-expand px-3 border-bottom">
+                <button class="btn" id="sidebar-toggle" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <form class="form-inline">
+                    <input type="search" id="site-search" name="q" placeholder="Search"/>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                   </form>
+                <div class="navbar-collapse navbar">
+                    
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3vKUlZrOOf_cgE9SWbM_J1Pg6X6sqHbsh9w&usqp=CAU" class="avatar img-fluid rounded" alt="">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a href="#" class="dropdown-item">Profile</a>
+                                <a href="#" class="dropdown-item">Setting</a>
+                                <a href="#" class="dropdown-item">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="content px-3 py-2">
+                <div class="container-fluid">
+                    <div class="mb-3">
+                    </div>
+                    
+<div class="Doctor">
+	<h2><b>DOCTORS</b></h2>
+    <br>
+	</div>
+
+	<!-- End title  -->
+
+				<!--=== Team v1 ===-->
+				<div class="container content-md team-v1">
+				<ul class="list-unstyled row">
+				<li class="col-sm-3 col-xs-6 " style="margin-bottom: 30px;">
+				<div class="team-img">
+				<img class="img-responsive" src="https://tse3.mm.bing.net/th?id=OIP.PBPYVES_vO2MW-UMqpAXQgHaHa&pid=Api&P=0&h=220" alt="">
+				
+				</div>
+				<h3>Dr. Harshil Patel</h3>
+				<h4>Consultant</h4>
+				<p>Child care</p>
+				</li>
+				<li class="col-sm-3 col-xs-6 " style="margin-bottom: 30px;">
+				<div class="team-img">
+				<img class="img-responsive" src="https://tse4.mm.bing.net/th?id=OIP.kw1mZyeDKXRgAlsR_-0vjwHaHa&pid=Api&P=0&h=220" alt="">
+				
+				</div>
+				<h3>Dr.Sahil Tiwari</h3>
+				<h4>MBBS</h4>
+				<p>Neurology</p>
+				</li>
+				<li class="col-sm-3 col-xs-6">
+				<div class="team-img">
+				<img class="img-responsive" src="https://tse2.mm.bing.net/th?id=OIP.rUltkC1QPiYDlRIbAc7bIwHaHa&pid=Api&P=0&h=220" alt="">
+				
+				</div>
+				<h3>Dr. Dhruv Shah</h3>
+				<h4>MBBS, MS, DNB</h4>
+				<p>General Surgery</p>
+				</li>
+
+				<li class="col-sm-3 col-xs-6">
+				<div class="team-img">
+				<img class="img-responsive" src="https://tse4.mm.bing.net/th?id=OIP.6Xkj0s94i42hGUOsCDdI4QHaHa&pid=Api&P=0&h=220" alt="">
+				
+				</div>
+				<h3>Dr.Vijeta kamat</h3>
+				<h4>MBBS</h4>
+				<p>Health Checkup</p>
+				</li>
+				</ul>
+
+				<!-- Second Line -->
+				<div class="container content-md team-v1" style="margin-left: -13px;">
+				<ul class="list-unstyled row">
+				<li class="col-sm-3 col-xs-6 " style="margin-bottom: 30px;">
+				<div class="team-img">
+				<img class="img-responsive" src="https://tse4.mm.bing.net/th?id=OIP.b7B-WFT08yZ5bTFBOdp25AHaHR&pid=Api&P=0&h=220" alt="">
+				
+				</div>
+				<h3>Dr.Kumar Patel</h3>
+				<h4>MD</h4>
+				<p>Dermatology</p>
+				</li>
+				<li class="col-sm-3 col-xs-6 " style="margin-bottom: 30px;">
+				<div class="team-img">
+				<img class="img-responsive" src="https://tse1.mm.bing.net/th?id=OIP.VVEYoLrThfExL19oVD8CgQHaHa&pid=Api&P=0&h=220" alt="">
+				
+				</div>
+				<h3>Dr. Namita Bhoj</h3>
+				<h4>MBBS,MS, MD</h4>
+				<p>Eye Specialist</p>
+				</li>
+				<li class="col-sm-3 col-xs-6">
+				<div class="team-img">
+				<img class="img-responsive" src="https://tse2.mm.bing.net/th?id=OIP.lenKUe4Ir210zOfMrAH2kAHaHa&pid=Api&P=0&h=220" alt="">
+				
+				</div>
+				<h3>Dr. Jeel Patel</h3>
+				<h4>MBBS</h4>
+				<p>CCU & ICU</p>
+				</li>
+
+				<li class="col-sm-3 col-xs-6 " style="margin-bottom: 30px;">
+				<div class="team-img">
+				<img class="img-responsive" src="https://tse2.mm.bing.net/th?id=OIP.EC0gOsVrXM8eovjwIiMl0gHaH5&pid=Api&P=0&h=220" alt="">
+				
+				</div>
+				<h3>Dr. Harman</h3>
+				<h4>MBBS</h4>
+				<p>Health Checkup</p>
+				</li>
+				</ul>
+				</div>
+				</div>
+               
+                    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
